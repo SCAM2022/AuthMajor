@@ -1,0 +1,29 @@
+.result {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  /* border: 2px rgba(0, 0, 0, 0.277) solid; */
+  background-color: rgb(253, 253, 253);
+  box-shadow: 4px 2px 5px 2px rgba(139, 137, 137, 0.384);
+}
+
+.selectableImg {
+  border: solid 1px transparent;
+  margin: 10px;
+  opacity: 0.8;
+}
+
+.selectableImg.selected {
+  border: solid 1px blue;
+}
+.selectableImg.selected.overlay {
+  /* position: absolute; */
+  display: flex;
+  /* width: 100%; */
+  /* height: 100%; */
+  /* background: rgba(13, 41, 79, 0.841); */
+  content: "dadada";
+  opacity: 1;
+  color: black;
+}
