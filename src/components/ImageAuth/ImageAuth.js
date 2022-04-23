@@ -39,9 +39,9 @@ function ImageAuth(props) {
         setShuffle={setShuffle}
       />
       <div className="prev_btn">
-        <button className="prev-btn" onClick={() => props.setPage(2)}>
+        <button className="prev-btn" onClick={() => props.setPage(1)}>
           {" "}
-          Goto next page
+          Goto prev page
         </button>
         <button className="prev-btn" onClick={authHandler}>
           {" "}
