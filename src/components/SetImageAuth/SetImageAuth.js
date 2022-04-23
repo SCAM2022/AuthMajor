@@ -2,6 +2,8 @@ import React from "react";
 import axios from "axios";
 
 import AuthImages from "../AuthImages/AuthImages";
+import "./SetImageAuth.css";
+
 function SetImageAuth(props) {
   const [order, setOrder] = React.useState("");
   const [shuffle, setShuffle] = React.useState(false);
@@ -39,8 +41,16 @@ function SetImageAuth(props) {
         shuffle={shuffle}
         setShuffle={setShuffle}
       />
-      <button onClick={() => props.setPage(1)}> Goto prev page</button>
-      <button onClick={() => sendData()}> Submit Pass</button>
+      <div className="prev_btn">
+        <button className="prev-btn" onClick={() => props.setPage(1)}>
+          {" "}
+          Goto prev page
+        </button>
+        <button className="prev-btn" onClick={() => sendData()}>
+          {" "}
+          Submit Pass
+        </button>
+      </div>
     </>
   );
 }

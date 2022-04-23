@@ -14,7 +14,7 @@ function ImageAuth(props) {
       return;
     }
     const payload = {
-      email: "abcd@gmail.com",
+      email: props?.email,
       password: order,
     };
     setShuffle((e) => !e);
@@ -38,8 +38,16 @@ function ImageAuth(props) {
         shuffle={shuffle}
         setShuffle={setShuffle}
       />
-      <button onClick={() => props.setPage(2)}> Goto next page</button>
-      <button onClick={authHandler}> check password</button>
+      <div className="prev_btn">
+        <button className="prev-btn" onClick={() => props.setPage(2)}>
+          {" "}
+          Goto next page
+        </button>
+        <button className="prev-btn" onClick={authHandler}>
+          {" "}
+          check password
+        </button>
+      </div>
     </>
   );
 }

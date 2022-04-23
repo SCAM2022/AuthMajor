@@ -15,7 +15,7 @@
 }
 
 .selectableImg.selected {
-  border: solid 1px blue;
+  border: solid 5px yellow;
 }
 .selectableImg.selected.overlay {
   /* position: absolute; */
