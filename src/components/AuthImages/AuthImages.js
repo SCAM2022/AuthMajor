@@ -55,33 +55,41 @@ function AuthImages({ order, setOrder, shuffle, setShuffle }) {
     });
   }, []);
   React.useEffect(() => {
-    setOrder("");
-    const sel = document.querySelectorAll(".selected");
-    sel?.forEach((element) => {
-      element.classList.remove("selected");
-    });
-    function shuffle(arra1) {
-      if (arra1) {
-        var ctr = arra1.length,
-          temp,
-          index;
-        while (ctr > 0) {
-          index = Math.floor(Math.random() * ctr);
-          ctr--;
-          temp = arra1[ctr];
-          arra1[ctr] = arra1[index];
-          arra1[index] = temp;
+    const shuffleImages = () => {
+      const sel = document.querySelectorAll(".selected");
+      sel?.forEach((element) => {
+        element.classList.remove("selected");
+      });
+      function shuffleFun(arra1) {
+        if (arra1) {
+          var ctr = arra1.length,
+            temp,
+            index;
+          while (ctr > 0) {
+            index = Math.floor(Math.random() * ctr);
+            ctr--;
+            temp = arra1[ctr];
+            arra1[ctr] = arra1[index];
+            arra1[index] = temp;
+          }
+          return arra1;
         }
-        return arra1;
       }
-    }
-    setData(shuffle(data));
-  }, [data, shuffle, setOrder]);
-  console.log("order->", order);
+      setData((prev) => shuffleFun(prev));
+      if (order) setOrder("");
+    };
+
+    const timer = setTimeout(() => {
+      shuffleImages();
+    }, 200);
+    return () => clearInterval(timer);
+  }, [shuffle]);
+
+  // console.log("order->", order);
   return (
     <>
-      <div class="bn31" onClick={(e) => setShuffle((s) => !s)}>
-        <span class="bn31span">Shuffle</span>
+      <div className="bn31" onClick={() => setShuffle((e) => !e)}>
+        <span className="bn31span">Shuffle</span>
       </div>
       {/* </div> */}
       <div className="result">

@@ -1,19 +1,21 @@
 .img_container {
   position: relative;
-  display: inline-flex;
+  display: grid;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 .img_container img {
-  height: 200px;
-  width: 200px;
+  /* height: 200px;
+  width: 200px; */
   display: flex;
-  padding: 3px;
+  padding: 5px;
   flex-direction: column;
   flex-wrap: wrap;
   box-shadow: 2px 2px 2px rgba(160, 147, 147, 0.284);
 }
+
 /* .reshuffle_btn > button {
   min-width: 140px;
   min-height: 50px;
@@ -52,6 +54,7 @@
   z-index: 2;
   margin: 15px auto;
   cursor: pointer;
+  user-select: none;
 }
 
 .bn31:hover {
@@ -72,3 +75,28 @@
 .bn31:hover .bn31span {
   background: transparent;
 }
+.img_container_withoverlay {
+  position: relative;
+}
+
+/* .img-overlay {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  padding: 10px;
+  background-color: #00a84f;
+  z-index: 99;
+  width: 70%;
+  height: 70%;
+  opacity: 0.5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-overlay::after {
+  content: "1";
+  color: white;
+  font-size: 6rem;
+  font-weight: bolder;
+} */

@@ -8,7 +8,7 @@ function SetImageAuth(props) {
   const [order, setOrder] = React.useState("");
   const [shuffle, setShuffle] = React.useState(false);
 
-  const sendData = async () => {
+  const nextPageHandler = async () => {
     if (!order) {
       console.log("No images selected");
       alert("Please select images!");
@@ -22,9 +22,9 @@ function SetImageAuth(props) {
     try {
       const r = axios.post(`http://localhost:5000/Guser/signup`, payload);
       console.log("response after setting graphical pass->", r);
-      alert("successfully signedUp");
       setShuffle((e) => !e);
       props?.setPage(3);
+      alert("successfully signedUp");
     } catch (e) {
       alert("try again!!");
       setShuffle((e) => !e);
@@ -35,6 +35,7 @@ function SetImageAuth(props) {
 
   return (
     <>
+      <h2>LEVEL-2 Image Password Signup</h2>
       <AuthImages
         order={order}
         setOrder={setOrder}
@@ -46,9 +47,9 @@ function SetImageAuth(props) {
           {" "}
           Goto prev page
         </button>
-        <button className="prev-btn" onClick={() => sendData()}>
+        <button className="prev-btn" onClick={() => nextPageHandler()}>
           {" "}
-          Submit Pass
+          Submit Password
         </button>
       </div>
     </>

@@ -1,0 +1,133 @@
+.login_container {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  margin: 0 auto;
+  flex-flow: column;
+  width: 40%;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  transition: all 0.4s ease;
+}
+
+.signup_container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  row-gap: 1rem;
+}
+.signup_email,
+.signup_pass {
+  background-color: rgb(42, 43, 43);
+  display: grid;
+  width: 100%;
+  /* height: 2.5rem; */
+  align-items: center;
+  justify-content: center;
+  row-gap: 0.3rem;
+  border-radius: 10px;
+  grid-template-columns: 0.1fr 1fr;
+}
+
+.signup_email input::placeholder,
+.signup_pass input::placeholder {
+  color: #363b41;
+}
+
+.signup_email input,
+.signup_pass input {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  background-color: rgb(99, 98, 98);
+  box-sizing: border-box;
+  margin: 0;
+  outline: 0;
+  padding: 10px;
+  -webkit-transition: background-color 0.3s;
+  -o-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+  color: white;
+  font-size: 1.1rem;
+}
+
+/* .signup_email>svg,.signup_pass>svg{
+      width: 100%;
+      height: 100%;
+      background-color: #3b4148;
+      box-sizing: border-box;
+      
+    } */
+.icon {
+  height: 2em;
+  display: inline-block;
+  fill: #606468;
+  min-width: 60px;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.signup_container input[type="password"]:focus,
+.signup_container input[type="password"]:hover,
+.signup_container input[type="email"]:focus,
+.signup_container input[type="email"]:hover {
+  background-color: #434a52;
+}
+.signup_container input[type="email"],
+.signup_container input[type="password"],
+.signup_container input[type="submit"] {
+  border-radius: 0.25rem;
+  padding: 1rem;
+}
+.submit_btn-container {
+  min-width: 50%;
+  border-radius: 5px;
+}
+.submit_btn-container > button {
+  width: 100%;
+  height: 3rem;
+  text-transform: uppercase;
+  background-color: #ea4c88;
+  color: #eee;
+  font-weight: 600;
+  border: 0;
+  font-size: 1.2em;
+}
+.submit_btn-container > button:focus,
+.submit_btn-container > button:hover {
+  background-color: #d44179;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+.forgot_pass-container {
+  display: flex;
+  width: 100%;
+  color: rgb(248, 0, 0);
+  text-decoration: underline;
+  justify-content: flex-end;
+  font-size: 1.1rem;
+  padding: 5px;
+}
+.forgot_pass-container:hover {
+  /* cursor: pointer; */
+}
+.forgot_pass-container label:hover {
+  color: white;
+  cursor: pointer;
+  text-decoration: underline;
+}
+@media (max-width: 710px) {
+  .login_container {
+    width: 90%;
+  }
+  .icon {
+    min-width: 60px;
+  }
+}

@@ -7,6 +7,7 @@ function Login() {
   const [page, setPage] = React.useState(1);
 
   const [email, setEmail] = React.useState("");
+  const [mobileNo, setMobileNo] = React.useState("");
   const [password, setPassword] = React.useState("");
 
   console.log("login page");
@@ -19,12 +20,15 @@ function Login() {
           password={password}
           setPassword={setPassword}
           setEmail={setEmail}
+          setMobileNo={setMobileNo}
         />
       )}
       {page === 2 && (
         <ImageAuth email={email} password={password} setPage={setPage} />
       )}
-      {page === 3 && <OtpAuth setPage={setPage} />}
+      {page === 3 && (
+        <OtpAuth mobileNo={mobileNo} setPage={setPage} email={email} />
+      )}
     </>
   );
 }

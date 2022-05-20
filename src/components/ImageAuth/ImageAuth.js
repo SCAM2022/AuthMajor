@@ -20,8 +20,10 @@ function ImageAuth(props) {
     setShuffle((e) => !e);
     try {
       const r = await axios.post(`http://localhost:5000/Guser/signin`, payload);
-      if (r.status === 200) alert("successfully Logged in");
-      else alert("try again");
+      if (r.status === 200) {
+        props?.setPage(3);
+        alert("successfully Logged in");
+      } else alert("try again");
       console.log("response after setting graphical pass->", r);
     } catch (e) {
       alert("try again");
@@ -31,7 +33,8 @@ function ImageAuth(props) {
 
   return (
     <>
-      <h2>User SignIn</h2>
+      <h1>Login Page</h1>
+      <h2>LEVEL-2 IMAGE-Based Authentication</h2>
       <AuthImages
         order={order}
         setOrder={setOrder}

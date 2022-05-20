@@ -2,20 +2,24 @@
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  width: 80%;
+  /* width: 80%; */
   /* border: 2px rgba(0, 0, 0, 0.277) solid; */
   background-color: rgb(253, 253, 253);
-  box-shadow: 4px 2px 5px 2px rgba(139, 137, 137, 0.384);
+  border: 5px solid rgba(40, 38, 38, 0.142);
+  /* box-shadow: 4px 2px 5px 2px rgba(139, 137, 137, 0.384); */
 }
 
 .selectableImg {
+  position: relative;
   border: solid 1px transparent;
   margin: 10px;
-  opacity: 0.8;
+  opacity: 0.6;
+  border: solid 3px white;
 }
 
 .selectableImg.selected {
-  border: solid 5px yellow;
+  border: solid 3px rgb(28, 28, 28);
+  opacity: 1;
 }
 .selectableImg.selected.overlay {
   /* position: absolute; */
