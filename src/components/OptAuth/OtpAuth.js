@@ -15,7 +15,8 @@ function OtpAuth({ email, mobileNo }) {
       try {
         const payload = {
           id: otpId,
-          token: otp,
+          otp: otp,
+          number: mobileNo,
         };
         const r = await axios.post(
           `http://localhost:5000/user/varifyOtp`,

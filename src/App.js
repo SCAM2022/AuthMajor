@@ -8,6 +8,7 @@ import Signup from "./page/Signup";
 import { BrowserRouter } from "react-router-dom";
 import ResetPasswordPage from "./page/ResetPasswordPage";
 import ResetPasswordPageLoading from "./page/ResetPasswordPageLoading";
+import AdvImgAuth from "./components/AdvImageAuth/AdvImgAuth";
 // import * as fs from "fs";
 function App() {
   const [page, setPage] = React.useState(1);
@@ -28,6 +29,11 @@ function App() {
             exact
             path="/resetPassword/"
             element={<ResetPasswordPageLoading />}
+          ></Route>
+          <Route
+            exact
+            path="/advance-img-auth"
+            element={<AdvImgAuth />}
           ></Route>
         </Routes>
       </BrowserRouter>
